@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B575AEA728A68667004312A1 /* M4L15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B575AEA628A68667004312A1 /* M4L15App.swift */; };
-		B575AEA928A68667004312A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B575AEA828A68667004312A1 /* ContentView.swift */; };
+		B575AEA928A68667004312A1 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B575AEA828A68667004312A1 /* LibraryView.swift */; };
 		B575AEAB28A68668004312A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B575AEAA28A68668004312A1 /* Assets.xcassets */; };
 		B575AEAE28A68668004312A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B575AEAD28A68668004312A1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		B575AEA328A68667004312A1 /* M4L15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M4L15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B575AEA628A68667004312A1 /* M4L15App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M4L15App.swift; sourceTree = "<group>"; };
-		B575AEA828A68667004312A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B575AEA828A68667004312A1 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		B575AEAA28A68668004312A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B575AEAD28A68668004312A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				B575AEA628A68667004312A1 /* M4L15App.swift */,
-				B575AEA828A68667004312A1 /* ContentView.swift */,
+				B575AEA828A68667004312A1 /* LibraryView.swift */,
 				B575AEAA28A68668004312A1 /* Assets.xcassets */,
 				B575AEAC28A68668004312A1 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B575AEA928A68667004312A1 /* ContentView.swift in Sources */,
+				B575AEA928A68667004312A1 /* LibraryView.swift in Sources */,
 				B575AEA728A68667004312A1 /* M4L15App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
