@@ -10,7 +10,7 @@ import SwiftUI
 struct BookSummaryView: View {
     
     @EnvironmentObject var model:BookModel
-    @State var rating = 0
+    @State var rating = 2
     var book:Book
     
     var body: some View {
@@ -43,9 +43,11 @@ struct BookSummaryView: View {
                 Text("5").tag(5)
             }
             .pickerStyle(SegmentedPickerStyle())
-//            .onChange(of: rating, perform: { value in
-//                //book.rating = rating
-//            })
+            .onChange(of: rating, perform: { value in
+                //when picker chsanges, change the rating
+                book.rating = rating
+            })
+            .onAppear { rating = book.rating }
             
             
         }
