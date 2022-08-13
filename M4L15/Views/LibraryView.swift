@@ -19,8 +19,7 @@ struct LibraryView: View {
                 VStack(spacing: 20) {
                     ForEach(model.books) { b in
                         NavigationLink(
-                            destination: BookSummaryView(book: b) ,
-                            //destination: BookSummaryView(book:b),
+                            destination: BookSummaryView(book: b),
                             label: {
                                 VStack(alignment: .leading, spacing: 8){
                                     Text(b.title)

@@ -16,16 +16,19 @@ struct BookSummaryView: View {
     var body: some View {
         
         VStack {
-            Text(book.title)
-                .font(.largeTitle)
-                .bold()
-                .multilineTextAlignment(.leading)
-            Text("Read now")
-                .font(.title)
-            Image("cover\(book.id)")
-                .resizable()
-                .scaledToFit()
+            NavigationLink (destination: ReadBook()){
+                VStack {
+                    Text("Read now!")
+                        .font(.title)
+                        .foregroundColor(Color.black)
+                    Image("cover\(book.id)")
+                        .resizable()
+                        .scaledToFit()
+                }
+            }
+            Spacer()
             Text("Mark for later!")
+                .bold()
             Button(
                 action: {
                     //model.updateFavorite()
@@ -33,9 +36,13 @@ struct BookSummaryView: View {
                 label: {
                     Image(systemName: "star")
                         .foregroundColor(.yellow)
+                        .font(.system(size: 32))
+                        .padding()
                 })
+            Spacer()
             Text("Rate \(book.title)")
-            Picker("Tap Me", selection: $rating) {
+                .bold()
+            Picker("Rate book", selection: $rating) {
                 Text("1").tag(1)
                 Text("2").tag(2)
                 Text("3").tag(3)
@@ -43,15 +50,16 @@ struct BookSummaryView: View {
                 Text("5").tag(5)
             }
             .pickerStyle(SegmentedPickerStyle())
+            .padding(.horizontal,30)
             .onChange(of: rating, perform: { value in
                 //when picker chsanges, change the rating
                 book.rating = rating
             })
             .onAppear { rating = book.rating }
-            
-            
+
         }
-        
+        .navigationBarTitle(book.title)
+        .padding(.horizontal)
         
     }
 }
