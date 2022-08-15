@@ -11,6 +11,7 @@ struct BookSummaryView: View {
     
     @EnvironmentObject var model:BookModel
     @State var rating = 2
+    @State var isFav = false
     var book:Book
     
     var body: some View {
@@ -18,6 +19,7 @@ struct BookSummaryView: View {
         VStack {
             NavigationLink (destination: ReadBook()){
                 VStack {
+                    Spacer()
                     Text("Read now!")
                         .font(.title)
                         .foregroundColor(Color.black)
@@ -31,14 +33,24 @@ struct BookSummaryView: View {
                 .bold()
             Button(
                 action: {
-                    //model.updateFavorite()
+                    isFav.toggle()
+                    book.isFavourite = isFav
                 },
                 label: {
-                    Image(systemName: "star")
+                    if isFav == false {
+                        Image(systemName: "star")
                         .foregroundColor(.yellow)
                         .font(.system(size: 32))
                         .padding()
+                    }
+                    else {
+                        Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                        .font(.system(size: 32))
+                        .padding()
+                    }
                 })
+                .onAppear { isFav = book.isFavourite }
             Spacer()
             Text("Rate \(book.title)")
                 .bold()
